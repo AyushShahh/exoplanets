@@ -1,0 +1,12 @@
+.new-card {
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+.new-card p {
+    color: grey;
+}

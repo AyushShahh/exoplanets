@@ -1,0 +1,38 @@
+{% extends 'exoplanets/layout.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'exoplanets/styles/visualization.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <div class="neptune-container">
+      <a href="/planet/neptune"><img src="../../static/exoplanets/assets/neptune.png" alt="Neptune"/></a>
+    </div>
+    <div class="uranus-container">
+      <a href="/planet/uranus"><img src="../static/exoplanets/assets/uranus.png" alt="Uranus"/></a>
+    </div>
+    <div class="saturn-container">
+      <a href="/planet/saturn"><img src="../static/exoplanets/assets/saturn.png" alt="Saturn"/></a>
+    </div>
+    <div class="jupiter-container">
+      <a href="/planet/jupiter"><img src="../static/exoplanets/assets/jupiter.png" alt="Jupiter"/></a>
+    </div>
+    <div class="mars-container">
+      <a href="/planet/mars"><img src="../static/exoplanets/assets/mars.png" alt="Mars"/></a>
+    </div>
+    <div class="earth-container">
+      <a href="/planet/earth"><img src="../static/exoplanets/assets/earth.png" alt="Earth"/></a>
+    </div>
+    <div class="venus-container">
+      <a href="/planet/venus"><img src="../static/exoplanets/assets/venus.png" alt="Venus"/></a>
+    </div>
+    <div class="mercury-container">
+      <a href="/planet/mercury"><img src="../static/exoplanets/assets/mercury.png" alt="Mercury"/></a>
+    </div>
+    <div class="sun-container">
+      <a href="#"><img src="../static/exoplanets/assets/sun.png" alt="Sun"/></a>
+    </div>
+</div>
+{% endblock %}

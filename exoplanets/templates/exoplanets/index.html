@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Discover Exoplanets{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'exoplanets/styles/index.css' %}">
+</head>
+<body>
+    <div class="background">
+        <div class="overlay">
+            {% block body %}
+                <header>
+                    <h1>Chronicles of Exoplanet Exploration</h1>
+                    <p>A journey through the fascinating worlds beyond our solar system!</p>
+                </header>
+                <div class="buttons">
+                    {% if request.user.is_authenticated %}
+                        <button onclick="window.location.href='{% url 'home' %}'">Explore</button>
+                    {% else %}
+                        <button onclick="window.location.href='{% url 'login' %}'">Login</button>&nbsp;&nbsp;
+                        <button onclick="window.location.href='{% url 'signup' %}'">Signup</button>
+                    {% endif %}
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

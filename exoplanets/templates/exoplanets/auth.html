@@ -1,0 +1,76 @@
+{% extends 'exoplanets/index.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{ auth.capitalize }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ auth.capitalize }}</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <form action="{% url auth %}" method="post">
+        {% csrf_token %}
+        {% if auth == 'signup' %}
+            <label for="first">First Name:</label>
+            <input type='text' name='first' placeholder='John' required><br>
+
+            <label for="last">Last Name:</label>
+            <input type='text' name='last' placeholder='Doe'><br>
+
+            <label for="grade">Education:</label>
+            <select name="grade">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">College</option>
+                <option value="14">Post Graduate</option>
+            </select><br>
+
+            <label for="city">City:</label>
+            <input type='text' name='city' placeholder='New York' required><br>
+
+            <label for="country">Country:</label>
+            <input type='text' name='country' placeholder='United States of America' required><br>
+        {% endif %}
+        <label for="username">Username:</label>
+        <input type='text' name='username' placeholder='Username' required><br>
+
+        <label for="password">Password:</label>
+        <input type='password' name='password' placeholder='Password' required><br>
+        {% if auth == 'signup' %}
+            <label for="confirm">Confirm Password:</label>
+            <input type='password' name='confirm' placeholder='Confirm password' required><br>
+        {% endif %}<br>
+        <button type="submit">
+            {% if auth == 'signup' %}
+                Create
+            {% else %}
+                Login
+            {% endif %}
+        </button>
+    </form>
+    <p>
+        {% if auth == 'login' %}
+            Don't have an account?
+        {% else %}
+            Already have an account?
+        {% endif %}
+        {% if auth == 'login' %}
+            <a href="{% url 'signup' %}">Signup</a>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+    </p>
+{% endblock %}

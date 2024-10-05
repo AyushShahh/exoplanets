@@ -1,0 +1,54 @@
+{% extends 'exoplanets/layout.html' %}
+
+{% block body %}
+    {% if message %}
+        <div class="alert alert-light" role="alert">
+            {{ message }}
+        </div>
+    {% endif %}
+    <h1><u>Blogs</u></h1>
+    <form action="{% url 'blogs' %}" method="post">
+        {% csrf_token %}
+        <select class="form-select mb-2" aria-label="Category" name="category">
+            <option selected value="">Choose a category</option>
+            {% for category in categories %}
+                <option value='{{ category.id }}'>{{ category.name }}</option>
+            {% endfor %}
+        </select>
+        <div class="mb-3">
+            <textarea class="form-control" rows="6" name='body' placeholder='Write a blog'></textarea>
+        </div>
+        <input type="submit" class="btn btn-light"></button>
+    </form>
+    <hr>
+    <h4>View Blog posts by category</h4>
+    <ul class="nav d-flex">
+        {% for category in categories %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'blogs' %}"><u>{{ category.name }}</a></u>
+            </li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <h4>Recent blog posts
+        {% if }
+    </h4>
+    {% if blogs %}
+        {% for blog in blogs %}
+        <div class="card">
+            <div class="card-header">
+              Posted {{ blog.timestamp }}
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>{{ blog.body }}</p>
+                <footer class="blockquote-footer">{{ blog.user.username }} in <cite title="{{ blog.category.name }}">{{ blog.category.name }}</cite></footer>
+              </blockquote>
+            </div>
+          </div>
+          <br>
+        {% endfor %}
+    {% else %}
+        No blogs yet
+    {% endif %}
+{% endblock %}
