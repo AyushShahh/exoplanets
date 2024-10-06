@@ -15,5 +15,5 @@ a {
 }
 
 .card, form {
-    opacity: 0.8;
+    background-color: rgba(0, 200, 200, 0.6);
 }

@@ -19,7 +19,7 @@
     border: 1px solid white;
  }
 
- .neptune-container>a>img {
+ .neptune-container>img {
     height: 37.5px;
     width: 37.5px;
     animation: neptune-rotation 153954ms linear infinite;
@@ -36,7 +36,7 @@
     border: 1px solid white;
  }
 
- .uranus-container>a>img {
+ .uranus-container>img {
     height: 56.25px;
     width: 56.25px;
     animation: uranus-rotation 120054ms linear infinite;
@@ -53,7 +53,7 @@
     border: 1px solid white;
  }
 
- .saturn-container>a>img {
+ .saturn-container>img {
     height: 56.25px;
     width: 56.25px;
     animation: saturn-rotation 99218ms linear infinite;
@@ -70,7 +70,7 @@
     border: 1px solid white;
  }
 
- .jupiter-container>a>img {
+ .jupiter-container>img {
     height: 56.25px;
     width: 56.25px;
     animation: jupiter-rotation 81339ms linear infinite;
@@ -87,7 +87,7 @@
     border: 1px solid white;
  }
 
- .mars-container>a>img {
+ .mars-container>img {
     height: 26.25px;
     width: 26.25px;
     animation: mars-rotation 36684ms linear infinite;
@@ -104,7 +104,7 @@
     border: 1px solid white;
  }
 
- .earth-container>a>img {
+ .earth-container>img {
     height: 22.5px;
     width: 22.5px;
     animation: earth-rotation 31079ms linear infinite;
@@ -121,7 +121,7 @@
     border: 1px solid white;
  }
 
- .venus-container>a>img {
+ .venus-container>img {
     height: 15px;
     width: 15px;
     animation: venus-rotation 27259ms linear infinite;
@@ -138,7 +138,7 @@
     border: 1px solid white;
  }
 
- .mercury-container>a>img {
+ .mercury-container>img {
     height: 15px;
     width: 15px;
     animation: mercury-rotation 25768ms linear infinite;
@@ -155,7 +155,7 @@
     border: 0px solid white;
  }
 
- .sun-container>a>img {
+ .sun-container>img {
     height: 112.5px; /* Shrink sun image */
     width: 112.5px;
     border-radius: 100%;
@@ -232,3 +232,14 @@
        transform: rotate(360deg) translate(93.75px) rotate(360deg);
     }
  }
+
+.story {
+   position: absolute;
+   background-color: rgba(20,20,20, 0.8);
+   border-radius: 10px;
+   color: white;
+   width: 26%;
+   margin-top: 40px;
+   margin-left: 6px;
+   padding: 10px;
+}

@@ -1,0 +1,54 @@
+{% extends 'exoplanets/layout.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'exoplanets/styles/visualization.css' %}">
+{% endblock %}
+
+{% block scripts %}
+  <script defer src="{% static 'exoplanets/scripts/story.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+  Learn from story 
+{% endblock %}
+
+{% block body %}
+<div class="story">
+  <h1 id="heading">Introduction</h1>
+  <p id="text">As you look at this diagram, you see our solar system—a family of planets orbiting the Sun. The planets, from Mercury closest to the Sun to Neptune on the outer edge, follow their paths, or orbits, around our star. These planets are familiar to us because they belong to our solar system.</p>
+  <div class="d-flex">
+    <button class="btn btn-light" id="back" style="display: none;">Back</button>&nbsp;&nbsp;
+    <button class="btn btn-light" id="next">Next</button>
+  </div>
+</div>
+<div class="wrapper">
+    <div class="neptune-container">
+      <img src="../../static/exoplanets/assets/neptune.png" alt="Neptune"/>
+    </div>
+    <div class="uranus-container">
+      <img src="../static/exoplanets/assets/uranus.png" alt="Uranus"/>
+    </div>
+    <div class="saturn-container">
+      <img src="../static/exoplanets/assets/saturn.png" alt="Saturn"/>
+    </div>
+    <div class="jupiter-container">
+      <img src="../static/exoplanets/assets/jupiter.png" alt="Jupiter"/>
+    </div>
+    <div class="mars-container">
+      <img src="../static/exoplanets/assets/mars.png" alt="Mars"/>
+    </div>
+    <div class="earth-container">
+      <img src="../static/exoplanets/assets/earth.png" alt="Earth"/>
+    </div>
+    <div class="venus-container">
+      <img src="../static/exoplanets/assets/venus.png" alt="Venus"/>
+    </div>
+    <div class="mercury-container">
+      <img src="../static/exoplanets/assets/mercury.png" alt="Mercury"/>
+    </div>
+    <div class="sun-container">
+      <img src="../static/exoplanets/assets/sun.png" alt="Sun"/>
+    </div>
+</div>
+{% endblock %}
