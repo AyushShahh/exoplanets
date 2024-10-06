@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from django.contrib.auth import authenticate, login as auth_login, logout
+from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
+from django.http import HttpResponse
 
 from .models import User, Blog, Category
 
@@ -116,9 +117,23 @@ def blogs(request, category=None):
     })
 
 
-def v(request):
-    return render(request, 'exoplanets/visualization.html')
+def story(request):
+    return render(request, 'exoplanets/story.html')
 
+def visualization(request):
+    return render(request, 'exoplanets/eyes.html')
+
+def logout(request):
+    if request.method == "POST":
+        auth_logout(request)
+        return redirect(reverse('index'))
+    return HttpResponse(status=403)
+
+def types(request):
+    return render(request, "exoplanets/types.html")
+
+def find(request):
+    return render(request, 'exoplanets/find.html')
 
 def quiz(request):
     return render(request, 'exoplanets/quiz.html')

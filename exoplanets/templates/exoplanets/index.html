@@ -19,10 +19,10 @@
                 </header>
               
                     {% if request.user.is_authenticated %}
-                        <button onclick="window.location.href='{% url 'home' %}'">Explore</button>
+                        <button class="btn btn-light" onclick="window.location.href='{% url 'home' %}'">Explore</button>
                     {% else %}
-                        <button onclick="window.location.href='{% url 'login' %}'">Login</button>&nbsp;&nbsp;
-                        <button onclick="window.location.href='{% url 'signup' %}'">Signup</button>
+                        <button class="btn btn-light" onclick="window.location.href='{% url 'login' %}'">Login</button>&nbsp;&nbsp;
+                        <button class="btn btn-light" onclick="window.location.href='{% url 'signup' %}'">Signup</button>
                     {% endif %}
                 </div>
             {% endblock %}

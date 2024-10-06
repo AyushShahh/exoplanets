@@ -10,6 +10,10 @@ urlpatterns = [
     path('profile/<str:username>', views.profile, name='profile'),
     path('blogs', views.blogs, name='blogs'),
     path('blogs/<str:category>', views.blogs, name='blog'),
-    path('v', views.v),
-    path('quiz', views.quiz,name='quiz')
+    path('storytelling', views.story, name="story"),
+    path('visualization', views.visualization, name="visualization"),
+    path('logout', views.logout, name="logout"),
+    path('exoplanets/types', views.types, name="types"),
+    path('how-to-find', views.find, name="find"),
+    path('quiz/', views.quiz, name="quiz")
 ]
