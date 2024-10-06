@@ -14,29 +14,31 @@
         <div class="new-card">
             <h1>What are exoplanets?</h1>
             <p>An exoplanet is any planet beyond our solar system. Most of them orbit other stars, but some free-floating exoplanets, called rogue planets, are untethered to any star. There are more than 5,600 confirmed exoplanets out of the billions that we believe exist.</p>
-            <a href="{% url 'overview' }"></a>
+            <div class="d-flex justify-content-center">
+                <a href="{% url 'story' %}">Learn through story</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{% url 'visualization' %}">Eyes on exoplanets ineractive map</a>
+                <!-- <a href="history">History</a> -->
+            </div>
         </div>
         <div class="new-card">
-            <h1>History of Exoplanets</h1>
-            <p>The history of exoplanet discovery began in the 1990s when the first confirmed exoplanet, 51 Pegasi b, was found orbiting a sun-like star. This breakthrough ignited interest in the search for planets beyond our solar system. </p>
-            <a href="{% url 'overview' }"></a>
+            <!-- <p>The history of exoplanet discovery began in the 1990s when the first confirmed exoplanet, 51 Pegasi b, was found orbiting a sun-like star. This breakthrough ignited interest in the search for planets beyond our solar system. </p> -->
+            <h1>Types of Exoplanets</h1>
+            <p>Exoplanets are planets located outside our solar system, varying in size and composition. Types include hot Jupiters, super-Earths, and ice giants, each with unique characteristics and potential for supporting life.
+            </p>
+            <a href="{% url 'types' %}" class="d-flex w-100 justify-content-center">Read more</a>
         </div>
     </div>
 
     <div class='d-flex'>
         <div class="new-card">
-            <h1>Types of Exoplanets</h1>
-
-            <p>Exoplanets are planets located outside our solar system, varying in size and composition. Types include hot Jupiters, super-Earths, and ice giants, each with unique characteristics and potential for supporting life.
-            </p>
-            <a href="{% url 'overview' }"></a>
+            <h1>How are exoplantes found </h1>
+            <p>There are five methods scientists commonly use to discover exoplanets. The two main techniques are the transit and radial velocity methods.</p>
+            <a href="{% url 'find' %}" class="d-flex w-100 justify-content-center">Learn the methods</a>
         </div>
         <div class="new-card">
-            <h1>How are exoplantes found </h1>
-            <p></p>
+            <h1>Blogs</h1>
+            <p>Stay updated to with insightful blogs exploring the latest exoplanet discoveries, research trends, and space missions. You can also post your own blogs about your understanding of exoplanets.</p>
+            <a href="{% url 'blogs' %}" class="d-flex w-100 justify-content-center">Blogs page</a>
         </div>
-    </div>
-    <iframe src="https://eyes.nasa.gov/apps/exo/" width="1000" height="500"></iframe>
-
-    
+    </div>  
 {% endblock %}

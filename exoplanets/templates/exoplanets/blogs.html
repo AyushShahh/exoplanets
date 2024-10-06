@@ -25,13 +25,15 @@
     <ul class="nav d-flex">
         {% for category in categories %}
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'blogs' %}"><u>{{ category.name }}</a></u>
+                <a class="nav-link" href="{% url 'blog' category.name %}"><u>{{ category.name }}</a></u>
             </li>
         {% endfor %}
     </ul>
     <hr>
     <h4>Recent blog posts
-        {% if }
+        {% if c %}
+            on {{ c }}
+        {% endif %}
     </h4>
     {% if blogs %}
         {% for blog in blogs %}

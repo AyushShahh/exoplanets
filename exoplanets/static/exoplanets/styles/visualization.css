@@ -232,3 +232,14 @@
        transform: rotate(360deg) translate(93.75px) rotate(360deg);
     }
  }
+
+.story {
+   position: absolute;
+   background-color: rgba(20,20,20, 0.8);
+   border-radius: 10px;
+   color: white;
+   width: 26%;
+   margin-top: 40px;
+   margin-left: 6px;
+   padding: 10px;
+}
