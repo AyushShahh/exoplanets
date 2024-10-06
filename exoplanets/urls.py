@@ -15,5 +15,6 @@ urlpatterns = [
     path('logout', views.logout, name="logout"),
     path('exoplanets/types', views.types, name="types"),
     path('how-to-find', views.find, name="find"),
-    path('games', views.games, name="games")
+    path('games/planet-finder', views.games, name="planet-finder"),
+    path('games/wordsearch', views.wordsearch, name="wordsearch")
 ]
