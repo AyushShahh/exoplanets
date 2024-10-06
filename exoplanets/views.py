@@ -134,3 +134,6 @@ def types(request):
 
 def find(request):
     return render(request, 'exoplanets/find.html')
+
+def games(request):
+    return render(request, 'exoplanets/games.html')

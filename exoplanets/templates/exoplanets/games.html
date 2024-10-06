@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exoplanet Match Game</title>
+  <link rel="stylesheet" href="static/exoplanets/styles/style.css">
+</head>
+<body>
+  <div class="background">
+    <div class="overlay">
+      <div class="game-container">
+        <h1>Planet Type Match Game</h1>
+        <p>Drag the planets to their correct categories and learn more about each type!</p>
+            <div class="planets-section">
+              <div class="planet" draggable="true" id="gas-giant">
+                <img src="static\exoplanets\assets\gas-giant.jpeg" alt="Gas Giant">
+                <p>Gas Giant</p>
+              </div>
+              <div class="planet" draggable="true" id="super-earth">
+                <img src="static\exoplanets\assets\super-earth.jpg" alt="Super Earth">
+                <p>Super Earth</p>
+              </div>
+              <div class="planet" draggable="true" id="terrestrial">
+                <img src="static\exoplanets\assets\super-earth.jpg" alt="Terrestrial">
+                <p>Terrestrial</p>
+              </div>
+              <div class="planet" draggable="true" id="neptunian">
+                <img src="static\exoplanets\assets\neptunian.webp" alt="Neptunian">
+                <p>Neptunian</p>
+              </div>
+            </div>
+        </div>
+      </div>
+
+    <div class="categories-section">
+      <div class="category" id="gas-giant-zone">
+        <h3>This is a large planet mostly composed of helium and/or hydrogen. These planets, like Jupiter and Saturn in our solar system, don’t have hard surfaces and instead have swirling gases above a solid core. These exoplanets can be much larger than Jupiter, and much closer to their stars than anything found in our solar system.</h3>
+        <p>Drop Here</p>
+      </div>
+      <div class="category" id="super-earth-zone">
+        <h3>A class of planets unlike any in our solar system – are more massive than Earth yet lighter than ice giants like Neptune and Uranus, and can be made of gas, rock or a combination of both. They are between twice the size of Earth and up to 10 times its mass.</h3>
+        <p>Drop Here</p>
+      </div>
+      <div class="category" id="terrestrial-zone">
+        <h3>These planets (Earth sized and smaller) are rocky worlds, composed of rock, silicate, water and/or carbon. To determine if some of these worlds have atmospheres, oceans or other signs of habitability, it takes more investigation. Larger exoplanets (those at least twice as massive as Earth) are classified as...?</h3>
+        <p>Drop Here</p>
+      </div>
+      <div class="category" id="neptunian-zone">
+        <h3>These exoplanets are similar in size to Neptune or Uranus in our solar system. These planets typically have hydrogen and helium-dominated atmospheres with cores of rock and heavier metals.</h3>
+        <p>Drop Here</p>
+      </div>
+    </div>
+
+    <div id="fact-box" class="fact-box hidden">
+      <p id="fact-text"></p>
+      <button id="close-fact">Close</button>
+    </div>
+
+    <button id="replay-button" class="replay hidden">Play Again</button>
+  </div>
+
+  <script src="static/exoplanets/scripts/script.js"></script>
+</body>
+</html>
