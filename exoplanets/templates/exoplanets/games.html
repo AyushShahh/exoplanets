@@ -1,10 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exoplanet Match Game</title>
-  <link rel="stylesheet" href="static/exoplanets/styles/style.css">
+  <link rel="stylesheet" href="{% static 'exoplanets/styles/style.css' %}">
 </head>
 <body>
   <div class="background">
@@ -14,19 +16,19 @@
         <p>Drag the planets to their correct categories and learn more about each type!</p>
             <div class="planets-section">
               <div class="planet" draggable="true" id="gas-giant">
-                <img src="static\exoplanets\assets\gas-giant.jpeg" alt="Gas Giant">
+                <img src="{% static 'exoplanets\assets\gas-giant.jpeg' %}" alt="Gas Giant">
                 <p>Gas Giant</p>
               </div>
               <div class="planet" draggable="true" id="super-earth">
-                <img src="static\exoplanets\assets\super-earth.jpg" alt="Super Earth">
+                <img src="{% static 'exoplanets\assets\super-earth.jpg' %}" alt="Super Earth">
                 <p>Super Earth</p>
               </div>
               <div class="planet" draggable="true" id="terrestrial">
-                <img src="static\exoplanets\assets\super-earth.jpg" alt="Terrestrial">
+                <img src="{% static 'exoplanets\assets\super-earth.jpg' %}" alt="Terrestrial">
                 <p>Terrestrial</p>
               </div>
               <div class="planet" draggable="true" id="neptunian">
-                <img src="static\exoplanets\assets\neptunian.webp" alt="Neptunian">
+                <img src="{% static 'exoplanets\assets\neptunian.webp' %}" alt="Neptunian">
                 <p>Neptunian</p>
               </div>
             </div>
@@ -60,6 +62,6 @@
     <button id="replay-button" class="replay hidden">Play Again</button>
   </div>
 
-  <script src="static/exoplanets/scripts/script.js"></script>
+  <script src="{% static 'exoplanets/scripts/script.js' %}"></script>
 </body>
 </html>
