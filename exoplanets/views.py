@@ -118,3 +118,7 @@ def blogs(request, category=None):
 
 def v(request):
     return render(request, 'exoplanets/visualization.html')
+
+
+def quiz(request):
+    return render(request, 'exoplanets/quiz.html')

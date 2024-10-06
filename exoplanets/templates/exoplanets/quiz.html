@@ -1,0 +1,46 @@
+{% extends 'exoplanets/layout.html' %} {% load static %} {% block title %}
+Exoplanet Quiz {%endblock %} {% block body %}
+
+<div id="quizContainer">
+  <div id="termsModal" class="terms-and-conditions p-6 rounded-lg shadow-lg">
+    <h1 class="font-bold mb-4">Terms and Conditions</h1>
+    <p class="mb-4">
+      Please read the terms and conditions carefully before taking the quiz.
+    </p>
+    <ul class="list-disc list-inside mb-4">
+      <li class="m-2">There will be a total of 10 questions.</li>
+      <li class="mb-2">
+        You can't undo the option or go back to the previous question.
+      </li>
+      <li class="mb-2">Points will increase for each correct answer.</li>
+      <li class="mb-2">You can take the quiz only once every 24 hours.</li>
+    </ul>
+    <label class="flex items-center mb-4">
+      <input type="checkbox" id="acceptTerms" class="mr-2 h-5 w-5" />
+      <span>I accept the terms and conditions</span>
+    </label>
+    <button
+      id="startQuizBtn"
+      class="px-5 py-4 rounded-lg bg-gray-300 text-gray-500 cursor-not-allowed"
+      disabled
+    >
+      Go to Quiz
+    </button>
+  </div>
+
+  <!-- Quiz Section -->
+  <div id="quizSection" class="hidden">
+    <h2 id="quizQuestion" class="m-10 p-7"></h2>
+    <ul id="quizOptions" class="m-10 flex flex-col gap-2"></ul>
+    <button
+      id="nextBtn"
+      class="hidden block mx-auto w-28 mt-8 p-2 rounded-lg bg-gray-300 cursor-not-allowed"
+    >
+      Next
+    </button>
+    <div id="quizProgress" class="mt-4"></div>
+  </div>
+</div>
+{% endblock %} {% comment %} {% block scripts %}
+<script src="{% static 'js/quiz.js' %}"></script>
+{% endblock %} {% endcomment %}
